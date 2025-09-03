@@ -23,7 +23,6 @@ A full-stack application for managing restaurant orders through a **self-service
 
 ## 🏗️ Architecture
 
-```mermaid
 flowchart LR
     A[Customer Kiosk UI] -->|Place Order| B[Backend API]
     B --> C[(PostgreSQL Database)]

@@ -1,0 +1,43 @@
+{
+  "name": "restaurant-ordering-kiosk",
+  "version": "1.0.0",
+  "description": "The Restaurant Ordering Kiosk + Dashboard is a digital solution designed to enhance both customer experience and restaurant management efficiency. The kiosk enables customers to independently browse the menu, customize orders, and make secure payments, reducing wait times and order errors. On the other hand, the dashboard provides restaurant staff and managers with centralized control over orders, menu updates, inventory tracking, and sales analytics. Together, the system streamlines operations, improves service speed, increases revenue through smart upselling, and offers valuable insights for data-driven decision-making",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch src --exec node index.js",
+    "start": "node index.js",
+    "prisma:generate": "npx prisma generate",
+    "prisma:migrate": "npx prisma migrate dev",
+    "prisma:reset": "npx prisma migrate reset",
+    "prisma:seed": "node prisma/seed.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "keywords": [
+    "shopping",
+    "order-management",
+    "system",
+    "jomoto",
+    "bigbucket"
+  ],
+  "type": "module",
+  "author": "bijoy mandal",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.3",
+    "socket.io": "^4.8.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@prisma/client": "^6.15.0",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.15.0"
+  }
+}

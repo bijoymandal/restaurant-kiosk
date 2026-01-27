@@ -1,4 +1,5 @@
 // prisma/seed.js
+import bcrypt from "bcrypt";
 import pkg from '@prisma/client';
 const { PrismaClient,Role } = pkg;
 
@@ -47,13 +48,14 @@ async function main() {
         email: 'admin@kiosk.com',
         phone: '9999999999',
         role: Role.STAFF,
-        password: 'password123', // ⚠️ hash this in real projects
+        password: await bcrypt.hash('password@123',10)
       },
       {
         name: 'Kiosk Machine',
         email: 'kiosk@kiosk.com',
         role: Role.KIOSK,
-        password: 'kioskpass',
+        password: await bcrypt.hash('kioskpass',10)
+
       },
     ],
     skipDuplicates: true,
